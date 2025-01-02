@@ -1,21 +1,28 @@
 {
   "name": "reactjs-signal-devtools",
   "author": "hunghg255",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+    "import": {
+      "types": "./index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "require": {
+      "types": "./index.d.ts",
+      "default": "./dist/index.cjs"
     }
   },
   "scripts": {
     "build": "bunchee"
   },
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
   "description": "Devtools for Reactjs Signal",
   "repository": "hunghg255/reactjs-signal-devtools",
