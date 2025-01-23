@@ -16,23 +16,20 @@ importers:
         version: 19.0.0(react@19.0.0)
     devDependencies:
       '@types/react':
-        specifier: ^18.0.9
+        specifier: ^18.3.18
         version: 18.3.18
       '@types/react-dom':
-        specifier: ^18.0.4
+        specifier: ^18.3.5
         version: 18.3.5(@types/react@18.3.18)
       bunchee:
-        specifier: ^6.2.0
+        specifier: ^6.0.3
         version: 6.2.0(typescript@3.9.10)
-      prettier:
-        specifier: ^1.17.0
-        version: 1.19.1
       pretty-quick:
-        specifier: ^1.10.0
+        specifier: ^1.11.1
         version: 1.11.1(prettier@1.19.1)
       reactjs-signal:
-        specifier: ^1.0.5
-        version: 1.0.5(alien-signals@0.4.12)(react@19.0.0)
+        specifier: ^1.1.1
+        version: 1.1.1(alien-signals@1.0.1)(react@19.0.0)
       typescript:
         specifier: ^3.9.10
         version: 3.9.10
@@ -301,8 +298,8 @@ packages:
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
 
-  alien-signals@0.4.12:
-    resolution: {integrity: sha512-Og0PgAihxlp1R22bsoBsyhhMG4+qhU+fkkLPoGBQkYVc3qt9rYnrwYTf+M6kqUqUZpf3rXDnpL90iKa0QcSVVg==}
+  alien-signals@1.0.1:
+    resolution: {integrity: sha512-oOo4M4xdTUCFK2oG2shusk7FR4hmpg0OJGlGEeLwQYctoJ+6UWOpHtU6Y6rBuFUaR34mgLpakcCFKeGFaoeJ0A==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -663,10 +660,10 @@ packages:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
     engines: {node: '>=0.10.0'}
 
-  reactjs-signal@1.0.5:
-    resolution: {integrity: sha512-ws2LVqu/P6IlE75poh74/OPYHGDL7eVcvyVXCugjL4Dac5fC7aFVpFrmfjaTfNHdnpsG5m+zCdBC1b+F9cBmWw==}
+  reactjs-signal@1.1.1:
+    resolution: {integrity: sha512-FA5+y9E8jEsJJlFOQICoH5STUUFponxc6cakIezhJ9oNvjlESwjrWyOjap9I0Ta68GlW8b+Ug+mTUhNrMKfaKA==}
     peerDependencies:
-      alien-signals: '>=0.4'
+      alien-signals: '>=1.0.0'
       react: '>=18'
 
   require-directory@2.1.1:
@@ -1018,7 +1015,7 @@ snapshots:
 
   '@types/resolve@1.20.2': {}
 
-  alien-signals@0.4.12: {}
+  alien-signals@1.0.1: {}
 
   ansi-regex@5.0.1: {}
 
@@ -1351,9 +1348,9 @@ snapshots:
 
   react@19.0.0: {}
 
-  reactjs-signal@1.0.5(alien-signals@0.4.12)(react@19.0.0):
+  reactjs-signal@1.1.1(alien-signals@1.0.1)(react@19.0.0):
     dependencies:
-      alien-signals: 0.4.12
+      alien-signals: 1.0.1
       react: 19.0.0
 
   require-directory@2.1.1: {}

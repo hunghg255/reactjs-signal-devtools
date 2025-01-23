@@ -2,14 +2,17 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createEffect } from 'reactjs-signal';
 
+type IWritableSignal<T> = {
+  (): T;
+  (value: T): void;
+};
+
 export function mountStoreDevtool(
   storeName: string,
-  store: any,
+  store: IWritableSignal<any>,
   rootElement?: HTMLElement
 ) {
-  type StoreState = ReturnType<any['get']>;
-
-  const ReactjsSignalDevtool: React.FC<StoreState> = () => {
+  const ReactjsSignalDevtool: React.FC<any> = () => {
     return null;
   };
 
@@ -32,7 +35,7 @@ export function mountStoreDevtool(
 
   const newRoot = createRoot(rootElement);
 
-  const renderDevtool = (props: StoreState | void) => {
+  const renderDevtool = (props: any | void) => {
     if (!props) {
       return;
     }
@@ -41,19 +44,19 @@ export function mountStoreDevtool(
   };
 
   renderDevtool(
-    typeof store.get() === 'object'
-      ? store.get()
+    typeof store() === 'object'
+      ? store()
       : {
-          state: store.get(),
+          state: store(),
         }
   );
 
   createEffect(() => {
     renderDevtool(
-      typeof store.get() === 'object'
-        ? store.get()
+      typeof store() === 'object'
+        ? store()
         : {
-            state: store.get(),
+            state: store(),
           }
     );
   });
